@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "./_components/navbar/Navbar";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Notify",
+  title: "SynthVid",
   description: "Ai-driven note generation",
 };
 
@@ -25,15 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   
-    <html lang="en">
-      
+    <ClerkProvider>
+    <html lang="en">  
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>
-   
+    </ClerkProvider>
   );
 }
