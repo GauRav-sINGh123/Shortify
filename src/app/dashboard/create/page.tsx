@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Dashboard() {
+function page() {
   return (
     <div className='text-black mt-20 flex justify-center items-center'>
-      <h1>Dashboard</h1>
+      <h2>Create a new video</h2>
     </div>
   )
 }
 
-export default Dashboard
+export default page
