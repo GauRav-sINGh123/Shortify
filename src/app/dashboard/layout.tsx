@@ -6,13 +6,13 @@ export default function DashBoardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <Sidebar />
-      
-      <div className="flex-1 p-4">
+    <div >
+      {/* Sidebar
+      <Sidebar /> */}
+{/*       
+      <div className="flex-1 p-4"> */}
         {children}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

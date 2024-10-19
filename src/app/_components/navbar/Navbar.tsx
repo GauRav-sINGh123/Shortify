@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           
-            <div className="w-full max-w-sm min-w-[200px]">
+            <div className="w-full hidden md:block max-w-sm min-w-[200px]">
               <div className="relative">
                 <input
                   className="w-full bg-transparent placeholder:text-slate-400 rounded-lg text-slate-700 text-sm border border-slate-200  pl-3 pr-28 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"

@@ -4,8 +4,11 @@ import { UserButton, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
 import { usePathname } from "next/navigation";
 export default function LoginButton() {
-    const {user}=useUser()
+    const {user,isLoaded}=useUser()
     const path=usePathname()
+    if(!isLoaded){
+        return <div>Loading...</div>
+    }
     return(
         <>
         {

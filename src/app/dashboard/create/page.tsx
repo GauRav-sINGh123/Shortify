@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import CreateVideo from '../_components/CreateVideo';
 
-function page() {
+function Page() {
   return (
-    <div className='text-black mt-20 flex justify-center items-center'>
-      <h2>Create a new video</h2>
+    <div className="flex justify-center items-center min-h-screen  ">
+      <div className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg mx-4 sm:mx-0">
+        <h2 className='text-lg md:text-3xl text-center font-semibold mb-4'>Create a new short video</h2>
+        <CreateVideo />
+      </div>
     </div>
-  )
+  );
 }
 
-export default page
+export default Page;
